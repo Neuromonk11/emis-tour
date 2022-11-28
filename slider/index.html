@@ -1,0 +1,224 @@
+
+              <!doctype html>
+              <html lang="ru">
+              
+              <head>
+                <meta charset="utf-8">
+                <meta content="width=device-width, initial-scale=1" name="viewport">
+                <title>Carousel & Slider</title>
+                <link href="https://itchief.ru/examples/libs/ui-components/itc-slider/itc-slider.css" rel="stylesheet">
+                <script src="https://itchief.ru/examples/libs/ui-components/itc-slider/itc-slider.js" defer></script>
+                <link rel="stylesheet" href="tingle.min.css">
+                <link rel="stylesheet" href="style.css">
+                <script src="tingle.min.js"></script>
+              </head>
+              
+              <body>
+              <script>
+                  const slide1 = {
+                    'img': 'https://images.unsplash.com/photo-1669064217047-c07914abb614?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+                    'title': 'Top 10 beautiful places in the world',
+                    'text': "Pick any place in the world, and it's bound to have something so stunning it will take your breath away. From natural wonders that attract the world's most unique wildlife to architectural stunners celebrating the evolution of mankind, our globe is dripping with beauty.",
+                  }
+                  
+                  const slide2 = {
+                    'img': 'https://images.unsplash.com/photo-1669093508981-3cf69a1431b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+                    'title': '10 Gifts Your Girlfriend Actually Wants',
+                    'text': "It’s getting close to that time of year again when you have to find the perfect gift ideas for your girlfriend. The witches come out to frighten you and ghosts of ex-girlfriends’ past haunt your every waking moment.I’m not referring to Halloween, when all you have to do is give her a little candy and you’ll get lucky in superhero costumes.",
+                  }
+                  
+                  const slide3 = {
+                    'img': 'https://images.unsplash.com/photo-1669023025155-f22f78d4c457?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
+                    'title': 'Top 10 coffee brands',
+                    'text': "1. Starbucks. With more than 30,000 retail stores in 83 countries, Starbucks clearly is one of the leading, most prominent and popular coffee chain in the world. It has a 12.4% share of the US ground coffee market. The inviting ambience and their innovation in making a variety of premium delights are what make everyone like to go back to order. From the classic white chocolate or salted caramel mocha to unique mango dragon fruit refresher or iced brown sugar oat milk shaken espresso, you can find its uniqueness in any of Starbucks drinks. 2. Costa Coffee. Costa Coffee is one of Britain's biggest coffee chains and one of the highest-selling coffee chains in the world. With over 4000 coffee shops and 10,000 smart café machines online, Costa Coffee is present in almost 31 countries. The iconic rich blends, hearty taste and the finest ingredients are some of the distinguishing features of this brand. Along with the signature coffees, a variety of foods and beverages are also offered at Costa Coffee.3. Nescafe.Nescafe is a brand of Nestle, which has a wide presence across the globe. From the east to the west, the north to the south, you will find this brand of instant coffee anywhere. It offers a bunch of blends and flavours along with the classic ones, including Nescafe Gold Crema, Nescafe Gold Latte, Nescafe Sumatra and more. When it comes to branding and availability, this brand is unbeatable as it is already enjoyed in over 180 countries.4. Tim HortonThe iconic Canadian brand holds a strong position in the Canadian coffee market and has one of Canada's largest coffee chain turnovers. Today, it is widely recognised as a fast-food franchise serving up high-quality coffees and doughnuts. More than 4900 Tim Hortons restaurants are being operated worldwide, with around 4300 being in Canada. Tim Hortons holds more of a traditional setting with less customisable coffee options; hence people who love just a simple good cup of coffee, this would be the right pick.5. Gloria Jeans.Founded in 1979, this successful American- Australian retail coffee house is one of the most loved coffee brands in the world. Gloria Jeans is one of the leading manufacturers in Australia, with more than 200 stores across the country. Also known for its excellence and premium coffee, it has 1000+ stores in 40 countries. From hot drinks to fruit or chillers, flavoured whole beans to blended whole beans, one can choose anything to experience the highest quality coffee.",
+                  }
+                  
+                  const slide4 = {
+                    'img': 'https://images.unsplash.com/photo-1669014130703-5c8d426a23d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+                    'title': 'How to Live on the Street',
+                    'text': "Keep a blanket with you. Lack of sleep is a major issue for individuals living on the streets because you let down your guard when you fall asleep. Always carry your blanket so that you can take advantage of a good sleeping opportunity. Sleeping bags are warm and suitable for outdoors. Try a bivy sack, which is like a body-sized tent. It is collapsible and will protect you from the elements. If you live in a very cold area, sleeping on the ground is risky even if you have a sleeping bag and warm clothes because the ground will absorb your body heat. You will need an inflatable insulated sleeping pad to keep in your heat.",
+                  }
+                  
+                  const slide5 = {
+                    'img': 'https://images.unsplash.com/photo-1668875687399-74025a4c9e8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+                    'title': 'The Best Resorts in the World',
+                    'text': "Now in its 35th year, our annual Reader’s Choice Awards continues to capture the travel experiences our readers love best, from hotels and airlines to cruises and islands. Plus: Odes to the properties that keep you coming back, meditations on beloved cities, and more.The numbers prove what we already knew: Enthusiasm for travel has never been higher, as demonstrated by the nearly quarter of a million of you who filled out this year’s survey. This year’s list is a testament to the staying power of perennial favorites, through thick and thin—with some newcomers to consider. Here are the best resorts in the world, as voted by Traveler readers.",
+                  }
+                  
+                  const slide6 = {
+                    'img': 'https://images.unsplash.com/photo-1668879109759-696729a15215?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80',
+                    'title': 'How to Start BMX Riding',
+                    'text': "Welcome to our 10-minute guide to BMX for beginners.Need to grab a regular dose of adrenaline, but also a sport that doesn’t completely break the bank?Riding BMX is for you.In our detailed guide to starting BMX, we’ll cover everything you need to know to get started.From which BMX bikes are best for beginners, through to a essential gear guide, how to do tricks and even how to modify and customize your BMX.We’ve even added a section on how to build dirt jumps.In part 1 we’ll look at the essential equipment you’ll need for starting BMX, or you can choose a section using the links below.Ready to get started?",
+                  }
+                  
+                  const slide7 = {
+                    'img': 'https://images.unsplash.com/photo-1668863699014-2c764a78205c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
+                    'title': 'The Top 10 Highest Mountains in the World',
+                    'text': "he highest mountain in the world is Mount Everest, sitting pretty at 8,848m in the Himalayas in Nepal. It's likely you already knew that. After all, ask 100 people in the world to name a mountain, and most will say Mount Everest. A lot of people also know that the second highest mountain in the world is K2, on the China-Pakistan border, but far fewer know that the third highest mountain in the world is called Kangchenjunga. Or how to spell that. It’s not quite as simple as ‘K2’, that’s for sure. So, how many of the highest mountains in the world do you really know? Everest tends to hog all the fame, but actually, the entire continent of Asia is full of huge mountains. The top 100 tallest mountains in the world are all in Asia. None of the seven summits - the highest mountains on each continent - are on this list except Everest. It's actually quite rare to find someone who knows about the sixth, seventh or eighth highest mountains in the world.",
+                  }
+              </script>
+              <div class="container">
+                <div class="itc-slider" data-autoplay="true" data-interval="5000" data-loop="true" data-refresh="true" data-slider="itc-slider">
+                  <div class="itc-slider__wrapper">
+                    <div class="itc-slider__items">
+                      <div class="itc-slider__item"><!-- Начало 1 слайда -->
+                        <div class="card">
+                          <header class="card__header">
+                            <img id="slide1" class="card__img" height="250" loading="lazy" width="350" onclick="setVariables(slide1)">
+                            <script>document.getElementById("slide1").src = slide1.img;</script>  
+                          </header>
+                          <h2 class="card__title"><script>document.write(slide1.title)</script></h2>
+                          <footer class="card__footer">
+                            <span class="card__text"><script>document.write(slide1.text)</script></span>
+                            <button class="itc-slider__button" onclick="setVariables(slide1)">View Info</button>
+                          </footer>
+                        </div>
+                      </div> 
+
+                      <div class="itc-slider__item"><!-- Начало 2 слайда -->
+                        <div class="card">
+                          <header class="card__header">
+                            <img id="slide2" class="card__img" height="250" loading="lazy" width="350" onclick="setVariables(slide2)">
+                            <script>document.getElementById("slide2").src = slide2.img;</script>  
+                          </header>
+                          <h2 class="card__title"><script>document.write(slide2.title)</script></h2>
+                          <footer class="card__footer">
+                            <span class="card__text"><script>document.write(slide2.text)</script></span>
+                            <button class="itc-slider__button" onclick="setVariables(slide2)">View Info</button>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="itc-slider__item"><!-- Начало 3 слайда -->
+                        <div class="card">
+                          <header class="card__header">
+                            <img id="slide3" class="card__img" height="250" loading="lazy" width="350" onclick="setVariables(slide3)">
+                            <script>document.getElementById("slide3").src = slide3.img;</script>  
+                          </header>
+                          <h2 class="card__title"><script>document.write(slide3.title)</script></h2>
+                          <footer class="card__footer">
+                            <span class="card__text"><script>document.write(slide3.text)</script></span>
+                            <button class="itc-slider__button" onclick="setVariables(slide3)">View Info</button>
+                          </footer>
+                        </div>
+                      </div> 
+
+                      <div class="itc-slider__item"><!-- Начало 4 слайда -->
+                        <div class="card">
+                          <header class="card__header">
+                            <img id="slide4" class="card__img" height="250" loading="lazy" width="350" onclick="setVariables(slide4)">
+                            <script>document.getElementById("slide4").src = slide4.img;</script>                       
+                          </header>
+                          <h2 class="card__title"><script>document.write(slide4.title)</script></h2>
+                          <footer class="card__footer">
+                            <span class="card__text"><script>document.write(slide4.text)</script></span>
+                            <button class="itc-slider__button" onclick="setVariables(slide4)">View Info</button>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="itc-slider__item"><!-- Начало 5 слайда -->
+                        <div class="card">
+                          <header class="card__header">
+                            <img id="slide5" class="card__img" height="250" loading="lazy" width="350" onclick="setVariables(slide5)">
+                            <script>document.getElementById("slide5").src = slide5.img;</script>                       
+                          </header>
+                          <h2 class="card__title"><script>document.write(slide5.title)</script></h2>
+                          <footer class="card__footer">
+                            <span class="card__text"><script>document.write(slide5.text)</script></span>
+                            <button class="itc-slider__button" onclick="setVariables(slide5)">View Info</button>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="itc-slider__item"><!-- Начало 6 слайда -->
+                        <div class="card">
+                          <header class="card__header">
+                            <img id="slide6" class="card__img" height="250" loading="lazy" width="350" onclick="setVariables(slide6)">
+                            <script>document.getElementById("slide6").src = slide6.img;</script>                          
+                          </header>
+                          <h2 class="card__title"><script>document.write(slide6.title)</script></h2>
+                          <footer class="card__footer">
+                            <span class="card__text"><script>document.write(slide6.text)</script></span>
+                            <button class="itc-slider__button" onclick="setVariables(slide6)">View Info</button>
+                          </footer>
+                        </div>
+                      </div> 
+
+                      <div class="itc-slider__item"><!-- Начало 7 слайда -->
+                        <div class="card">
+                          <header class="card__header">
+                            <img id="slide7" class="card__img" height="250" loading="lazy" width="350" onclick="setVariables(slide7)">
+                            <script>document.getElementById("slide7").src = slide7.img;</script>                         
+                          </header>
+                          <h2 class="card__title"><script>document.write(slide7.title)</script></h2>
+                          <footer class="card__footer">
+                            <span class="card__text"><script>document.write(slide7.text)</script></span>
+                            <button class="itc-slider__button" onclick="setVariables(slide7)">View Info</button>
+                          </footer>
+                        </div>
+                      </div> <!-- Конец 7 слайда -->
+                    </div>
+                  </div>
+                  <button class="itc-slider__btn itc-slider__btn_prev"></button>
+                  <button class="itc-slider__btn itc-slider__btn_next"></button>
+                  <ol class="itc-slider__indicators">
+                    <li class="itc-slider__indicator" data-slide-to="0"></li>
+                    <li class="itc-slider__indicator" data-slide-to="1"></li>
+                    <li class="itc-slider__indicator" data-slide-to="2"></li>
+                    <li class="itc-slider__indicator" data-slide-to="3"></li>
+                    <li class="itc-slider__indicator" data-slide-to="4"></li>
+                    <li class="itc-slider__indicator" data-slide-to="5"></li>
+                    <li class="itc-slider__indicator" data-slide-to="6"></li>
+                  </ol>             
+              </div>
+
+
+              <script>    
+                             
+                  // instanciate new modal
+                  var modal = new tingle.modal({
+                      footer: true,
+                      stickyFooter: false,
+                      closeMethods: ['overlay', 'button', 'escape'],
+                      closeLabel: "Close",
+                      cssClass: ['custom-class-1', 'custom-class-2'],
+                      onOpen: function() {
+                          console.log('modal open');
+                      },
+                      onClose: function() {
+                          console.log('modal closed');
+                      },
+                      beforeClose: function() {
+                          // here's goes some logic
+                          // e.g. save content before closing the modal
+                          return true; // close the modal
+                          return false; // nothing happens
+                      }
+                  });
+
+
+                  // add another button
+                  modal.addFooterBtn('Close', 'tingle-btn tingle-btn--danger', function() {
+                      // here goes some logic
+                      modal.close();
+                  });
+
+                  function setVariables(slide) {
+                    img = slide.img;
+                    title = slide.title;
+                    text = slide.text;
+
+                    
+                    // set content
+                    modal.setContent("<div class='modal'><h2 class='modal_title'>" + title +"</h2><img class='modal_img' src='" + img + "'> <span class='modal_text'>" + text + "</span></div>");
+                    // open modal
+                    modal.open();
+                  }; 
+
+              </script>
+              </body>
+              
+              </html>
+              
+                                      
